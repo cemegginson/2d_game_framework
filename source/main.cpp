@@ -14,9 +14,7 @@
 #include "core/app_2d.h"
 #include "core/input_device.h"
 
-// Plugable Renderers
 #include "render/renderer.h"
-#include "render/opengl/opengl_renderer.h"
 
 int main(int argc, char* argv[]) {
     UNUSED(argc); UNUSED(argv);
@@ -58,7 +56,7 @@ int main(int argc, char* argv[]) {
     //========================================
     // Construct Game
     //========================================
-    App* app = new App2D();
+    App2D* app = new App2D();
     if (!app->Initialize(renderer, input_device)) {
         printf("Game could not Initialize!");
         exit(1);  // this case will leak a lot of memory...

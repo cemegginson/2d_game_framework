@@ -15,11 +15,11 @@ Actor2D::~Actor2D() {
 }
 
 void Actor2D::Initialize(std::string name,
-                       Vector2 transform,
+                       Vector2 position,
                        uint32 angle,
                        bool controllable) {
     name_ = name;
-    transform_ = transform;
+    position_ = position;
     angle_ = angle;
     sprite_clip_.x = 0;
     sprite_clip_.y = 0;
@@ -47,8 +47,8 @@ void Actor2D::Update(float32 delta_time) {
 Vector2 Actor2D::position() {
     return position_;
 }
-void Actor2D::set_position(Vector2 new_position) {
-    position_ = new_position;
+void Actor2D::set_position(Vector2 position) {
+    position_ = position;
 }
 
 float32 Actor2D::angle() {

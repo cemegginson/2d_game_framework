@@ -5,8 +5,9 @@
 
 #include "util/definitions.h"
 #include "event_system/Subscriber.h"
+#include "render/actor_2d.h"
 
-class Actor;
+class Actor2D;
 
 class Component {
 protected:

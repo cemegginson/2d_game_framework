@@ -6,6 +6,7 @@
 
 #include "art_library/ArtAssetLibrary.h"
 #include "components/Bullet.h"
+#include "render/actor_2d.h"
 #include "virtual/component.h"
 #include "util/definitions.h"
 

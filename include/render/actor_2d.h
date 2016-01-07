@@ -44,7 +44,7 @@ public:
     bool IsControllable();
 
     Vector2 position();
-    void set_transform(Vector2);
+    void set_position(Vector2);
 
     float32 angle();
     void set_angle(float32);

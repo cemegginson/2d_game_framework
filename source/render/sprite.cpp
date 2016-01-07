@@ -2,7 +2,7 @@
 #include "render/sprite.h"
 #include "event_system/Subscriber.h"
 
-Sprite::Sprite(Actor2D* owner) : Component(owner) {
+Sprite::Sprite(Actor2D* owner) {
     texture_ = nullptr;
 
     Subscriber* s = new Subscriber(this);
