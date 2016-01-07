@@ -39,18 +39,12 @@ endif()
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_image REQUIRED)
-find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
-find_package(GLM REQUIRED)
-
-# find_package(Box2D REQUIRED)
+find_package(Box2D REQUIRED)
 
 message(STATUS "SDL2_LIBRARY...... ${SDL2_LIBRARY}")
 message(STATUS "SDL2_INCLUDE_DIR.. ${SDL2_INCLUDE_DIR}")
-message(STATUS "OPENGL_LIBRARY.... ${OPENGL_gl_LIBRARY}")
-message(STATUS "GLEW_LIBRARIES ${OPENGL_glu_LIBRARY}")
-# message(STATUS "BOX2D_LIBRARY..... ${BOX2D_LIBRARY}")
-# message(STATUS "BOX2D_INCLUDE_DIR. ${BOX2D_INCLUDE_DIR}")
+message(STATUS "BOX2D_LIBRARY..... ${BOX2D_LIBRARY}")
+message(STATUS "BOX2D_INCLUDE_DIR. ${BOX2D_INCLUDE_DIR}")
 
 # Include directories with relevant items
 add_subdirectory("${CMAKE_SOURCE_DIR}/source")

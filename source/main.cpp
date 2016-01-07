@@ -5,20 +5,19 @@
 
 // Media Libraries
 #include "SDL.h"
-#undef main
+
 // Physics
 #include "Box2D/Box2D.h"
 
 // Project Libraries
 #include "util/definitions.h"
 #include "core/app_2d.h"
-#include "core/app_3d.h"
 #include "core/input_device.h"
 
 // Plugable Renderers
 #include "render/renderer.h"
 #include "render/opengl/opengl_renderer.h"
-#include "render/sdl/sdl_renderer.h"
+#include "render/sdl_renderer.h"
 
 int main(int argc, char* argv[]) {
     UNUSED(argc); UNUSED(argv);
@@ -41,7 +40,7 @@ int main(int argc, char* argv[]) {
     // Construct Graphical Device
     //========================================
     Renderer* renderer = nullptr;
-    renderer = new OpenGLRenderer(screen_width, screen_height);
+    renderer = new SDLRenderer(screen_width, screen_height);
 
     if (!renderer->Initialize()) {
         printf("Graphics Device could not initialize!");
@@ -60,7 +59,7 @@ int main(int argc, char* argv[]) {
     //========================================
     // Construct Game
     //========================================
-    App* app = new App3D();
+    App* app = new App2D();
     if (!app->Initialize(renderer, input_device)) {
         printf("Game could not Initialize!");
         exit(1);  // this case will leak a lot of memory...

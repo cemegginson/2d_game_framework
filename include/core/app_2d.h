@@ -9,8 +9,8 @@
 // #include "art_library/ArtAssetLibrary.h"
 //
 // #include "core/timer.h"
-// #include "render/sdl/sdl_camera.h"
-// #include "render/sdl/actor_2d.h"
+// #include "render/sdl_camera.h"
+// #include "render/actor_2d.h"
 //
 // #include "render/renderer.h"
 //

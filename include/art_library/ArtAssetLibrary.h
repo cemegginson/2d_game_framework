@@ -3,11 +3,11 @@
 // #include <map>
 // #include <string>
 //
-// #include "render/sdl/sdl_texture.h"
-// #include "render/sdl/sdl_camera.h"
+// #include "render/sdl_texture.h"
+// #include "render/sdl_camera.h"
 //
 // #include "render/renderer.h"
-// #include "render/sdl/sdl_renderer.h"
+// #include "render/sdl_renderer.h"
 // #include "render/opengl/opengl_renderer.h"
 //
 //

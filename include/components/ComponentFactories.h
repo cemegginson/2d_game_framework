@@ -13,12 +13,12 @@
 // #include "components/Infantry.h"
 // #include "components/Player.h"
 //
-// #include "render/sdl/sdl_animation.h"
+// #include "render/sdl_animation.h"
 //
 // #include "render/opengl/gl_drawable.h"
 //
 // #include "core/input_device.h"
-// #include "render/sdl/sprite.h"
+// #include "render/sprite.h"
 // #include "core/physics_2d.h"
 //
 // #include "virtual/component.h"

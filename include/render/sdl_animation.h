@@ -7,7 +7,7 @@
 
 #include "SDL.h"
 
-#include "render/sdl/actor_2d.h"
+#include "render/actor_2d.h"
 #include "virtual/component.h"
 #include "util/definitions.h"
 

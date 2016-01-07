@@ -8,16 +8,15 @@
 #include "SDL.h"
 
 #include "virtual/component.h"
-#include "render/actor.h"
 
 #include "util/definitions.h"
 #include "core/input_device.h"
-#include "render/sdl/sdl_camera.h"
+#include "render/sdl_camera.h"
 
 class Component;
 // class Actor;
 
-class Actor2D : public Actor {
+class Actor2D {
 protected:
     std::string name_;
     Vector2 position_;
