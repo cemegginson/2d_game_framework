@@ -13,7 +13,7 @@
 // #include "components/Infantry.h"
 // #include "components/Player.h"
 //
-// #include "render/sdl_animation.h"
+// #include "render/animation.h"
 //
 // #include "render/opengl/gl_drawable.h"
 //

@@ -11,7 +11,7 @@
 
 #include "util/definitions.h"
 #include "core/input_device.h"
-#include "render/sdl_camera.h"
+#include "render/camera.h"
 
 class Component;
 // class Actor;

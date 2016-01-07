@@ -15,7 +15,7 @@ protected:
     Actor2D* owner_;
     std::vector<Subscriber*> subscribers_;
     ArtAssetLibrary* art_library_;
-    // SDLRenderer* renderer_;
+    // Renderer* renderer_;
     InputDevice* input_device_;
     uint32 travel_;
     uint32 radius_;

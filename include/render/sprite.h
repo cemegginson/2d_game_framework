@@ -3,21 +3,21 @@
 #include <memory>
 
 #include "virtual/component.h"
-#include "render/sdl_renderer.h"
-#include "render/sdl_texture.h"
+#include "render/renderer.h"
+#include "render/texture.h"
 
-class SDLRenderer;
+class Renderer;
 
 class Sprite : public Component {
 protected:
-    SDLTexture* texture_;
-    SDLRenderer* renderer_;
+    Texture* texture_;
+    Renderer* renderer_;
     SDL_Rect sprite_clip_;
 
 public:
     Sprite(Actor*);
     ~Sprite();
-    void Initialize(Renderer*, SDLTexture*);
+    void Initialize(Renderer*, Texture*);
     void Update(std::shared_ptr<void> delta_time);
     void Draw();
 };

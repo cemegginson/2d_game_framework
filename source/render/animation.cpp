@@ -4,7 +4,7 @@
 #include <map>
 #include <utility>
 
-#include "render/sdl_animation.h"
+#include "render/animation.h"
 
 Animation::Animation(Actor2D* owner) {
     owner_ = owner;

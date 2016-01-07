@@ -6,12 +6,11 @@
 #include "SDL.h"
 
 #include "util/definitions.h"
-#include "render/renderer.h"
 #include "render/sprite.h"
 
 class Sprite;
 
-class SDLRenderer {
+class Renderer {
 protected:
     SDL_Window* window_;
     SDL_Renderer* renderer_;
@@ -21,9 +20,9 @@ protected:
     uint32 height_;
 
 public:
-    SDLRenderer();
-    SDLRenderer(uint32, uint32);
-    ~SDLRenderer();
+    Renderer();
+    Renderer(uint32, uint32);
+    ~Renderer();
     bool Initialize();
     void AddSprite(Sprite*);
 

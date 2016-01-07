@@ -18,7 +18,7 @@
 //     Bullet();
 //     ~Bullet();
 //     void Update(float32);
-//     void Render(float32, SDLCamera*);
+//     void Render(float32, Camera*);
 //     int GetLife();
-//     void Initialize(GraphicsDevice*, SDLTexture*, b2World*, Vector2, Vector2);
+//     void Initialize(GraphicsDevice*, Texture*, b2World*, Vector2, Vector2);
 // };

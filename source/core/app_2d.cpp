@@ -58,7 +58,7 @@
 //     renderer_ = renderer;
 //     input_device_ = input_device;
 //
-//     camera_ = new SDLCamera();
+//     camera_ = new Camera();
 //     camera_->Initialize(input_device_);
 //
 //     // Load sprites

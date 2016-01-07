@@ -17,7 +17,6 @@
 // Plugable Renderers
 #include "render/renderer.h"
 #include "render/opengl/opengl_renderer.h"
-#include "render/sdl_renderer.h"
 
 int main(int argc, char* argv[]) {
     UNUSED(argc); UNUSED(argv);
@@ -40,7 +39,7 @@ int main(int argc, char* argv[]) {
     // Construct Graphical Device
     //========================================
     Renderer* renderer = nullptr;
-    renderer = new SDLRenderer(screen_width, screen_height);
+    renderer = new Renderer(screen_width, screen_height);
 
     if (!renderer->Initialize()) {
         printf("Graphics Device could not initialize!");
@@ -70,7 +69,7 @@ int main(int argc, char* argv[]) {
     // Load Level
     //========================================
     app->Reset();
-    std::string level_config_file = "foobar.xml";
+    std::string level_config_file = "Assets/Config/level.xml";
     if (!app->LoadLevel(level_config_file)) {
         printf("Game could not load level %s: ",
                level_config_file.c_str());

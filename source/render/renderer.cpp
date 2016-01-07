@@ -1,23 +1,23 @@
 #include <iostream>
 
-#include "render/sdl_renderer.h"
+#include "render/renderer.h"
 #include "util/game_utils.h"
 
-SDLRenderer::SDLRenderer() {
+Renderer::Renderer() {
     window_ = nullptr;
     renderer_ = nullptr;
     width_ = 0;
     height_ = 0;
 }
 
-SDLRenderer::SDLRenderer(uint32 screen_width, uint32 screen_height) {
+Renderer::Renderer(uint32 screen_width, uint32 screen_height) {
     window_ = nullptr;
     renderer_ = nullptr;
     width_ = screen_width;
     height_ = screen_height;
 }
 
-SDLRenderer::~SDLRenderer() {
+Renderer::~Renderer() {
     SDL_DestroyRenderer(renderer_);
     SDL_DestroyWindow(window_);
 
@@ -25,8 +25,8 @@ SDLRenderer::~SDLRenderer() {
     renderer_ = nullptr;
 }
 
-bool SDLRenderer::Initialize() {
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
+bool Renderer::Initialize() {
+    if (SDL_InitSubSystem(SDL_INIT_VIDEO) != 0) {
         LogSDLError(std::cerr, "SDL_Init");
         return false;
     }
@@ -60,33 +60,33 @@ bool SDLRenderer::Initialize() {
     return true;
 }
 
-inline RENDER_TYPE SDLRenderer::type() {
+inline RENDER_TYPE Renderer::type() {
     return RENDER_TYPE::SDL;
 }
 
-uint32 SDLRenderer::width() { return width_; }
+uint32 Renderer::width() { return width_; }
 
-uint32 SDLRenderer::height() { return height_; }
+uint32 Renderer::height() { return height_; }
 
-SDL_Renderer* SDLRenderer::renderer() {
+SDL_Renderer* Renderer::renderer() {
     return renderer_;
 }
 
-void SDLRenderer::AddSprite(Sprite* sprite) {
+void Renderer::AddSprite(Sprite* sprite) {
     sprites_.push_back(sprite);
 }
 
-inline void SDLRenderer::PreDraw() {
+inline void Renderer::PreDraw() {
     SDL_RenderClear(renderer_);
 }
 
-inline void SDLRenderer::Draw() {
+inline void Renderer::Draw() {
     // Cycle through every objects' Draw method
     for (auto iter = sprites_.begin(); iter != sprites_.end(); ++iter) {
         (*iter)->Draw();
     }
 }
 
-inline void SDLRenderer::PostDraw() {
+inline void Renderer::PostDraw() {
     SDL_RenderPresent(renderer_);
 }

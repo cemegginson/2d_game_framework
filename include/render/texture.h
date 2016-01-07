@@ -6,18 +6,18 @@
 #include "SDL_image.h"
 
 #include "util/definitions.h"
-#include "render/sdl_camera.h"
+#include "render/camera.h"
 
-class SDLTexture {
+class Texture {
 protected:
     SDL_Texture* texture_;
     SDL_Renderer* renderer_;
-    SDLCamera* camera;
+    Camera* camera;
 
 public:
-    SDLTexture();
-    ~SDLTexture();
-    bool Initialize(SDL_Renderer*, SDLCamera*, std::string);
+    Texture();
+    ~Texture();
+    bool Initialize(SDL_Renderer*, Camera*, std::string);
     void Render(Vector2, float32, SDL_Rect);
     // void Render(Vector2, float32);
     void GetDimensions(int32*, int32*);
