@@ -1,4 +1,4 @@
-###Advanced Game Programming Final###
+###2D Game Framework###
 
 This originally started out as my final project in Advanced Game Programming,
 but it ended up going through some transformations that led to the formation of
