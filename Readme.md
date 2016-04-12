@@ -1,20 +1,12 @@
 ###Advanced Game Programming Final###
 
 This originally started out as my final project in Advanced Game Programming,
-but it's come a long way since then with 3D capabilities thanks to a new renderer
-written in OpenGL, as well as greatly increased speed thanks to Bryan's Threaded
-Event System that he originally wrote for his Advanced Game Programming class.
+but it ended up going through some transformations that led to the formation of
+two projects. My original intention with this was to develop it into a full
+blown engine for 2D games, and I may either still do that or do it the hard way
+by using a full blown OpenGL or Vulkan renderer. Quite frankly I'm unsure, so
+I'm leaving this here for now.
 
-To compile this project you'll require SDL2, SDL2_image, GLM, GLEW, and an OpenGL 3.3
-capable GPU and its accompanying graphics driver. You'll also need CMake and whichever
-compiler toolchain you would prefer, be it Visual Studio, GCC, or Clang.
-
-Extensive knowledge of CMake and how Windows handles paths is required to build 
-the engine on Windows.  We strongly reccommend using any modern version of Linux
-to easily install the requirements.  If using Linux, CMake will automatically
-find the dependencies if they are installed.
-
-The code is written in C++14 but uses some C99 compatible headers.  Make sure to
-use a compiler toolchain that supports C++14 range loops and 
-C++14 std::unique_lock<>.  C++14 condition variables are also required for 
-runtime thread safety.
+In any case, if you're just here to read my code you'd be much better off
+reading my source in the 3d_app_framework project since that's where I go to cut
+my teeth these days.
